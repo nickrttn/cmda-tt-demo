@@ -22,11 +22,13 @@ const Label = styled.label`
 class SpringDemo extends Component {
   state = { x: 250, y: 250, r: 50 };
 
+  // Set the state based on input[range] values
   setPosition = evt => {
     const { value, name: key } = evt.target;
     this.setState({ [key]: parseInt(value, 10) });
   };
 
+  // Animate the position of the circle every time the state is updated
   render() {
     return (
       <ResponsiveContainer>

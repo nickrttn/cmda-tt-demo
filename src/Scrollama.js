@@ -3,8 +3,6 @@ import styled from 'styled-components/macro';
 import { Container } from './shared';
 import scrollama from 'scrollama';
 
-let scroller = scrollama();
-
 const Step = styled.div`
   padding: 1em 1.5em;
   background-color: white;
@@ -40,9 +38,12 @@ const Emoji = styled.span`
 
 class ScrollamaDemo extends Component {
   state = { background: 'orange' };
+  scroller = scrollama();
 
+  // Setup a scrollama scroller that observes elements with a 'data-step' attribute inside
+  // an element with a 'data-container' attribute
   componentDidMount() {
-    scroller
+    this.scroller
       .setup({
         step: '[data-step]',
         container: '[data-container]'
@@ -56,6 +57,7 @@ class ScrollamaDemo extends Component {
     this.setState({ background });
   };
 
+  // data-step that pass the default threshold will set the background color of the Container
   render() {
     return (
       <Container background={this.state.background} data-container>

@@ -54,6 +54,7 @@ const StyledLink = styled(Link)`
 `;
 
 class App extends Component {
+  // App renders a router, the selected route component and a navigation bar
   render() {
     return (
       <>
