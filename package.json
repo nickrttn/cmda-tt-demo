@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "d3-fetch": "^1.1.2",
+    "d3-geo": "^1.11.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
+    "react-spring": "^6.1.8",
+    "scrollama": "^1.4.4",
     "styled-components": "^4.1.1"
   },
   "scripts": {

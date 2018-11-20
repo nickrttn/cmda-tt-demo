@@ -2,18 +2,55 @@ import React, { Component } from 'react';
 import { Router, Link } from '@reach/router';
 import styled, { createGlobalStyle } from 'styled-components/macro';
 
+import SpringDemo from './Spring';
+import MapDemo from './Map';
+import ScrollamaDemo from './Scrollama';
+
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'sans-serif';
     font-variant: common-ligatures;
   }
+
+  code {
+    font-family: Monaco, Menlo, monospace;
+    font-size: 0.9em;
+  }
+
+  a {
+    text-decoration-skip-ink: auto;
+  }
 `;
 
 const Nav = styled.nav`
-  height: 2em;
+  height: 3em;
   background-color: #2e2e2e;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const List = styled.ul`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const Item = styled.li`
+  margin: 0 0.75em;
+`;
+
+const StyledLink = styled(Link)`
+  color: white;
+
+  &:hover {
+    color: orange;
+  }
 `;
 
 class App extends Component {
@@ -21,25 +58,30 @@ class App extends Component {
     return (
       <>
         <Nav>
-          <ul>
-            <li>
-              <Link to="/">
+          <List>
+            <Item>
+              <StyledLink to="/">
                 <code>react-spring</code>
-              </Link>
-            </li>
-            <li>
-              <Link to="/scrollama">
+              </StyledLink>
+            </Item>
+            <Item>
+              <StyledLink to="/scrollama">
                 <code>scrollama</code>
-              </Link>
-            </li>
-            <li>
-              <Link to="/a-map">
+              </StyledLink>
+            </Item>
+            <Item>
+              <StyledLink to="/a-map">
                 <code>een kaart</code>
-              </Link>
-            </li>
-          </ul>
+              </StyledLink>
+            </Item>
+          </List>
         </Nav>
-        <Router />
+        <Router>
+          <SpringDemo path="/" />
+          <MapDemo path="/a-map" />
+          <ScrollamaDemo path="/scrollama" />
+        </Router>
+        <GlobalStyles />
       </>
     );
   }
