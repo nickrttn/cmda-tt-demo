@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
-  height: calc(100vh - 3em);
-  background: orange;
+  min-height: calc(100vh - 3em);
+  background: ${props => props.background || 'orange'};
   position: relative;
 `;
 
