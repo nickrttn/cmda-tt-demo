@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 
 import { ResponsiveContainer } from './shared';
-import { Spring, animated } from 'react-spring';
+import { Spring } from 'react-spring';
 
 const Controls = styled.div`
   position: absolute;
