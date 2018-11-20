@@ -1,26 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router, Link } from '@reach/router';
+import styled, { createGlobalStyle } from 'styled-components/macro';
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: 'sans-serif';
+    font-variant: common-ligatures;
+  }
+`;
+
+const Nav = styled.nav`
+  height: 2em;
+  background-color: #2e2e2e;
+  color: #fff;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <Nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <code>react-spring</code>
+              </Link>
+            </li>
+            <li>
+              <Link to="/scrollama">
+                <code>scrollama</code>
+              </Link>
+            </li>
+            <li>
+              <Link to="/a-map">
+                <code>een kaart</code>
+              </Link>
+            </li>
+          </ul>
+        </Nav>
+        <Router />
+      </>
     );
   }
 }
