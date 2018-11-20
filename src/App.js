@@ -71,7 +71,7 @@ class App extends Component {
               </StyledLink>
             </Item>
             <Item>
-              <StyledLink to="/a-map">
+              <StyledLink to="/d3-geo">
                 <code>d3-geo</code>
               </StyledLink>
             </Item>
@@ -79,8 +79,8 @@ class App extends Component {
         </Nav>
         <Router>
           <SpringDemo path="/" />
-          <MapDemo path="/a-map" />
           <ScrollamaDemo path="/scrollama" />
+          <MapDemo path="/d3-geo" />
         </Router>
         <GlobalStyles />
       </>
