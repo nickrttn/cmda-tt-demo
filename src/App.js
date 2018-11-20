@@ -72,7 +72,7 @@ class App extends Component {
             </Item>
             <Item>
               <StyledLink to="/a-map">
-                <code>een kaart</code>
+                <code>d3-geo</code>
               </StyledLink>
             </Item>
           </List>
