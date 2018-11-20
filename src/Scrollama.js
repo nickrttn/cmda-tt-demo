@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
-import { Container } from './shared';
 import scrollama from 'scrollama';
+
+import { Container } from './shared';
 
 const Step = styled.div`
   padding: 1em 1.5em;

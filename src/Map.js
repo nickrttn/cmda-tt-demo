@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { ResponsiveContainer } from './shared';
 import { json as fetchJSON } from 'd3-fetch';
 import { geoPath, geoMercator } from 'd3-geo';
+
+import { ResponsiveContainer } from './shared';
 
 const publicPath = process.env.PUBLIC_URL;
 

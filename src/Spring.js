@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Spring } from 'react-spring';
 import styled from 'styled-components/macro';
 
 import { ResponsiveContainer } from './shared';
-import { Spring } from 'react-spring';
 
 const Controls = styled.div`
   position: absolute;
